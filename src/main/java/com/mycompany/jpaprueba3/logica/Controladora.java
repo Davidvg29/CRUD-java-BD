@@ -1,13 +1,30 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.jpaprueba3.logica;
 
-/**
- *
- * @author user
- */
+import com.mycompany.jpaprueba3.persistencia.ControladoraPersistencia;
+import java.util.ArrayList;
+
 public class Controladora {
+    
+    ControladoraPersistencia controlPersis = new ControladoraPersistencia();
+    
+    public void crearAlumno (Alumno alu){
+        controlPersis.createAlumno(alu);
+    }
+    
+    public void eliminarAlumno ( int id ){
+        controlPersis.eliminarAlumno(id);
+    }
+    
+    public void editarAlumno(Alumno alu){
+        controlPersis.editarAlumno(alu);
+    }
+    
+    public Alumno traerAlumno(int id){
+        return controlPersis.traerAlumno(id);
+    }
+    
+    public ArrayList<Alumno> traerListaAlumnos(){
+        return controlPersis.traerListaAlumnos();
+    }
     
 }
