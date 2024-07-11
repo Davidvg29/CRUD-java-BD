@@ -1,2 +1,2 @@
 # CRUD-java-BD
-basi crud with java plus bd postgresql
+basic crud with java and base data postgresql
