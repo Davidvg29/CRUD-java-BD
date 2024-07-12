@@ -49,4 +49,27 @@ public class Controladora {
         return controlPersis.traerListaCarreras();
     }
     
+    
+    
+    //Materia
+    public void crearMateria (Materia materia){
+        controlPersis.crearMateria(materia);
+    }
+    
+    public void eliminarMateria ( int id ){
+        controlPersis.eliminarMateria(id);
+    }
+    
+    public void editarMateria(Materia materia){
+        controlPersis.editarMateria(materia);
+    }
+    
+    public Materia traerMateria(int id){
+        return controlPersis.traerMateria(id);
+    }
+    
+    public ArrayList<Materia> traerListaMateria(){
+        return controlPersis.traerListaMaterias();
+    }
+    
 }
