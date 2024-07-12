@@ -1,26 +1,25 @@
 package com.mycompany.jpaprueba3;
 
 import com.mycompany.jpaprueba3.logica.Alumno;
+import com.mycompany.jpaprueba3.logica.Carrera;
 import com.mycompany.jpaprueba3.logica.Controladora;
-import java.util.ArrayList;
 import java.util.Date;
 
 public class Jpaprueba3 {
     public static void main(String[] args) {
         
-        Controladora control = new Controladora();
+       Controladora control = new Controladora();
+       
+       Carrera carre = new Carrera(87, "tecnicatura nutricion");
+       control.crearCarrera(carre);
+       Alumno alu = new Alumno(77, "antonio", "barros", new Date(), carre);
+       control.crearAlumno(alu);
         
-        Alumno alu = control.traerAlumno(23);
-        System.out.println("---------busqueda individual----------");
-        System.out.println("el alumno es: " + alu.toString());
-        
-        System.out.println("----------busqueda de todos-----------");
-        ArrayList<Alumno> listaAlumnos = control.traerListaAlumnos();
-        for (Alumno al : listaAlumnos) {
-            System.out.println("el alumno es: "+al.toString());
-        }
-        
-        
+        System.out.println("---------------------------");
+        System.out.println("-------------Datos alumnos----------------");
+        Alumno alum = control.traerAlumno(87);
+        System.out.println("Alumno: "+ alum.getNombre()+alum.getApellido());
+        System.out.println("Cursa la carre de: "+ alum.getCarre().getNombre());
         
     }
 }

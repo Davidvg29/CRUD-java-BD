@@ -3,6 +3,7 @@
   <persistence-unit name="pruebaJPAPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>com.mycompany.jpaprueba3.logica.Alumno</class>
+    <class>com.mycompany.jpaprueba3.logica.Carrera</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/jpaPrueba"/>
       <property name="javax.persistence.jdbc.user" value="postgres"/>
